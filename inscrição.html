@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Sobre mim</a>
+                </li>
+                <li>
+                    <a href="project.html">Projetos</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contato</a>
+                </li>
+                <li>
+                    <a href="inscrição.html">Inscrição</a>
+                </li>
+            </ul>
+        </nav>
+
+    <div class="card-form">
+        
+        <div class="right-content">
+            <h1>Inscreva-se</h1>
+            <span>Se confirmar os dados é só dar 10</span>
+             <img src="img-details.svg" class="vn details-01" draggable="false" aria-hidden="true" alt="details">
+             <img src="img-details.svg" class="vn details-02" draggable="false" aria-hidden="true" alt="details">
+             <form method="post" action="#">
+                <div class="form-group">
+                    <label for="input-nome">Nome:</label>
+                    <input type="text" id="input-nome" name="nome" size="50" required/>
+                </div>
+                <div class="form-group">
+                    <label for="input-email">Email:</label>
+                    <input type="email" id="input-email" name="email" size="50" required/>
+                </div>
+                <div class="form-group">
+                    <label for="">Senha:</label>
+                    <input type="password" id="input-senha" name="senha" size="50"  required/>
+                </div>
+                <div class="form-group">
+                    <button type="button" onclick="formulario.validar()">Validar</button>
+                    <button type="button" onclick="formulario.imprimir()">Imprimir</button>
+                </div>
+                <div id="saida"></div>
+             </form> 
+             
+            </div>
+    </div>
+
+
+    <script>
+        class Formulario {
+    constructor() {
+        this.nome = "";
+        this.email = "";
+        this.senha = "";
+    }
+
+    resgatar() {
+        this.nome = document.getElementById("input-nome").value;
+        this.email = document.getElementById("input-email").value;
+        this.senha = document.getElementById("input-senha").value;
+    }
+
+    validar() {
+        this.resgatar();
+        var regexpNome = /^[a-zA-Z ]{3,50}$/;
+        var regexpEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        /* var regexpSenha = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; */
+        if (regexpNome.test(this.nome) && regexpEmail.test(this.email)) {
+            document.getElementById("saida").innerHTML = "Dados válidos";
+        } else {
+            document.getElementById("saida").innerHTML = "Dados inválidos";
+        }
+    }
+
+    imprimir() {
+        this.resgatar();
+        let data = {
+            nome: this.nome,
+            email: this.email,
+            senha: this.senha
+        };
+        console.log(JSON.stringify(data));
+        document.getElementById("saida").innerHTML = JSON.stringify(data);
+    }
+}
+
+let formulario = new Formulario();
+    </script>
+</body>
+</html>

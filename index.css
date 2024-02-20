@@ -1,0 +1,184 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header img {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #5BBE42;
+}
+
+.center {
+    text-align: center;
+}
+
+h1 {
+    color: #5BBE42;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    margin: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 2px;
+}
+
+.container {
+    padding: 0px 50px;
+}
+
+nav a {
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #5BBE42;
+}
+
+.contact-form input{
+    width: 100%;
+    padding: 8px 0;
+    margin: 8px 0;
+}
+
+.contact-form input[type=text] {
+    height: 100px;
+}
+
+button {
+    color: black;
+    background-color: white;
+    border: none;
+    width: 100px;
+    height: 30px;
+}
+
+.card-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 1000px;
+}
+
+.card-form .right-content{
+  width: 100%;
+  max-width: 700px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  flex-direction: column;
+}
+
+
+.card-form .right-content h1{
+    color: #ff8c00;
+    font-size: 45px;
+    letter-spacing: 6.75px;
+    margin-bottom: 10px;
+}
+
+.card-form .right-content span{
+    color: #ff8c00;
+    font-size: 25px;
+}
+
+.card-form .right-content form .form-group label{
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+}
+
+.card-form .right-content form .form-group input{
+    border-radius: 2px;
+    border: 1px solid #CACACA;
+    height: 30px;
+    background-color: #FFF;
+    
+    /* box-shadow */
+    box-shadow: 2px 4px 6px 0px rgba(79, 79, 79, 0.15);
+    padding-left: 7px;
+}
+
+.card-form .right-content form{
+    margin-top: 10px;
+}
+
+.card-form .right-content form .form-group:not(:last-child){
+    margin-bottom: 12px;
+}
+
+
+.card-form .right-content form .form-group button{
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+    
+    background-color: #03A9F4;
+    
+    /* box-shadow */
+    box-shadow: 2px 4px 6px rgba(79, 79, 79, 0.15);
+    color: #FFF;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 34px;
+    transition: opacity .3s;
+} 
+
+.card-form .right-content form .form-group button:hover{
+    opacity: 0.8;
+}
+
+
+.card-form .right-content{
+    position: relative;
+    border: 2px solid gray;
+}
+
+.card-form .right-content .vn{
+    position: absolute;
+}
+
+.card-form .right-content .vn.details-01{
+    top: 0;
+    right: 0;
+}
+
+.card-form .right-content .vn.details-02{
+    bottom: 0;
+    left: 0;
+}
+
+
+.card-form .right-content form .form-group button:not(:last-child){
+    margin-bottom: 7px;
+}
